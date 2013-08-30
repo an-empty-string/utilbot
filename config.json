@@ -1,0 +1,11 @@
+{
+    "host": "irc.freenode.org",
+    "port": 6667,
+    "nick": "fwilutilbot",
+    "default_channels": [
+        "#tjhsst-botspam"
+    ],
+    "logfile": "/dev/null",
+    "permfile": "permissions.json"
+}
+    
