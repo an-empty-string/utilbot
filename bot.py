@@ -1,3 +1,4 @@
+#!/usr/bin/python2 -OO
 from twisted.words.protocols import irc
 from twisted.internet import reactor, protocol
 from twisted.python import log
@@ -127,6 +128,7 @@ class UtilBotFactory(protocol.ClientFactory):
                    if i.endswith(".py")]
         mods = {i: importlib.import_module(i) for i in modlist}
         mods = {i: mods[i] for i in mods if mods[i].__enabled__}
+        return mods
 
     def clientConnectionLost(self, connector, reason):
         connector.connect()
