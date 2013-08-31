@@ -16,7 +16,7 @@ def run(bot, event):
             mods[i] = reload(bot.modules[i])
         else:
             mods[i] = importlib.import_module(i)
-    mods = {i:mods[i] for i in mods if mods[i].__enabled__}
+    mods = {i: mods[i] for i in mods if mods[i].__enabled__}
     bot.modules = mods
     bot.perms.perms = json.loads(open(bot.perms.permfile).read())
     bot.say(event.channel, "Permissions and modules reloaded.")
