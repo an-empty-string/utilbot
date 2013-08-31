@@ -9,7 +9,7 @@ def run(bot, event):
             bot.perms.add_perm(event.match.group(3), event.match.group(2))
             bot.say(event.channel, "Permissions set.")
         else:
-            bot.say(event.channel, 
+            bot.say(event.channel,
                     "You do not have permission to add a permission.")
     else:
         if bot.perms.has_perm("core/permissions/unset", event.user):
